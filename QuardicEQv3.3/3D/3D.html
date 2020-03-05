@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <meta name="viewport" content="width=device-width,user-scalable=no">
+ 
+    <body id='main'>
+        <script src="../JS/naviboard.min.js"></script>
+      <link rel="stylesheet" href="../css.css">
+        
+        <div id="container">
+             
+            
+            <a href="../index.html" class="navigable" id="elements">3D</a>
+             <a href="cuboid.html" class="navigable" id="elements"><div>Cuboid</div></a>
+             <a href="sphere.html" class="navigable" id="elements"><div>Shpere</div></a>
+          <a href="cone.html"  class="navigable" id="elements"><div>Cone</div></a>
+          <a href="cylinder.html"  class="navigable" id="elements"><div>Cylinder</div></a>
+          
+        </div>
+                
+     
+        <script>
+            
+        naviBoard.setNavigation('container')
+        </script>
+        <style>
+             #main{
+          
+            background-image: url(../IMG/img_wallpaper_03.jpg);
+            background-repeat: no-repeat;
+            background-size: auto;
+            background-attachment:fixed;
+          display: block;
+ }
+       
+            
+        
+        </style>
+ <footer id="softkeys">
+            <div id="softkey-left">Forward</div>
+            <div id="softkey-center">Go</div>
+            <div id="softkey-right">Back</div>
+        </footer>
+    </body>
+</html>

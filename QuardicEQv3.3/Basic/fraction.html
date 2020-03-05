@@ -1,0 +1,67 @@
+<html>
+<head></head>
+    <meta name="viewport" content="width=device-width,user-scalable=no">
+     <meta charset="utf-8">
+     <link rel="stylesheet" href="../css.css">
+    <body id='main'>
+        <script src="../JS/naviboard.min.js"></script>
+        <script src="../JS/math.min.js"></script>
+       
+        <div id="container">
+             
+            
+            <a href="basic.html" class="navigable" id="elements">fraction x/y</a>
+            <input class="navigable" id="inp" placeholder="put your point value" type="number" value="">
+            <button class="navigable" id="elements" onclick="fun()">Result</button>
+            <p id="result1" class="navigable">long press on backspace for delete values</p>
+            
+             <a href="#"  class="navigable" id="elements"><div></div></a>
+            <a href="#"  class="navigable" id="elements"><div></div></a>
+            
+            
+          
+           <script>
+           function fun(){
+               var n = document.getElementById("inp").value;
+               var res1 = document.getElementById("result1");
+                var e = math.fraction(n);
+            var x = e.n;
+               var y = e.d;
+              res1.innerHTML = "<p>"+n+"= "+x+"/"+y+"</p>";
+               }
+            </script>
+            
+                
+     
+        <script>
+            
+        naviBoard.setNavigation('container');
+           
+          
+            
+        </script>
+            <style>
+             #main{
+          
+            background-image: url(../IMG/img_wallpaper_06.jpg);
+            background-repeat: no-repeat;
+            background-size: auto;
+            background-attachment:fixed;
+          display: block;
+    
+        }
+                #inp{
+                    width: 200px;
+        
+        }
+                #elements{
+                    width: 100%;
+                }
+
+               
+            </style> <footer id="softkeys">
+            <div id="softkey-left">Forward</div>
+            <div id="softkey-center">Go</div>
+            <div id="softkey-right">Back</div>
+        </footer>
+</html>

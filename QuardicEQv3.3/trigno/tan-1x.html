@@ -1,0 +1,67 @@
+<html>
+<head></head>
+    <meta name="viewport" content="width=device-width,user-scalable=no">
+     <link rel="stylesheet" href="../css.css">
+    <body id='main'>
+        <script src="../JS/naviboard.min.js"></script>
+       
+        <div id="container">
+             
+            
+            <a href="trigno.html" class="navigable" id="elements">tan<sup>-1</sup>(x)</a>
+            <input class="navigable" id="inp" placeholder="Put value of x" type="number" value="">
+            <button class="navigable" id="elements" onclick="fun()">Result</button>
+            <p id="result">long press on backspace for delete values</p>
+            
+            
+          
+           <script>
+              
+         
+               function fun(){
+                    var pi = Math.PI;
+               var deg = pi/180;
+                     var x = document.getElementById("inp").value;
+            var y = document.getElementById("result");
+            var z = Math.atan(x);
+                   
+                   y.innerHTML = z/deg;
+                  
+                 
+               }
+            </script>
+            
+                
+     
+        <script>
+            
+        naviBoard.setNavigation('container');
+           
+          
+            
+        </script>
+            <style>
+             #main{
+          
+            background-image: url(../IMG/img_wallpaper_06.jpg);
+            background-repeat: no-repeat;
+            background-size: auto;
+            background-attachment:fixed;
+          display: block;
+    
+        }
+                #inp{
+                    width: 200px;
+        
+        }
+                #elements{
+                    width: 100%;
+                }
+
+               
+            </style> <footer id="softkeys">
+            <div id="softkey-left">Forward</div>
+            <div id="softkey-center">Go</div>
+            <div id="softkey-right">Back</div>
+        </footer>
+</html>

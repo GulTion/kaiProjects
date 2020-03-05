@@ -1,0 +1,75 @@
+<html>
+<head></head>
+    <meta name="viewport" content="width=device-width,user-scalable=no">
+     <link rel="stylesheet" href="../css.css">
+    <body id='main'>
+        <script src="../JS/naviboard.min.js"></script>
+        <script src="../JS/math.min.js"></script>
+       
+        <div id="container">
+             
+            
+            <a href="basic.html" class="navigable" id="elements">Power x<sup>y</sup></a>
+            <input class="navigable" id="a" placeholder="Put value of x" type="number" value="">
+             <input class="navigable" id="b" placeholder="put value of y" type="number" value="">
+            <button class="navigable" id="elements" onclick="fun()">Result</button>
+            <p id="result1" class="navigable">long press on backspace for delete values</p>
+            
+             <a href="#"  class="navigable" id="elements"><div></div></a>
+            <a href="#"  class="navigable" id="elements"><div></div></a>
+            
+            
+          
+           <script>
+           function fun(){
+               var x = document.getElementById("a").value;
+              
+               var y = document.getElementById("b").value;
+               var res1 = document.getElementById("result1");
+             var d = Math.pow(x,y);
+            
+             
+               res1.innerHTML = "<p>"+x+"<sup>"+y+"</sup> = "+d+"</p>";
+             
+                   
+                 
+               }
+            </script>
+            
+                
+     
+        <script>
+            
+        naviBoard.setNavigation('container');
+           
+          
+            
+        </script>
+            <style>
+             #main{
+          
+            background-image: url(../IMG/img_wallpaper_05.jpg);
+            background-repeat: no-repeat;
+            background-size: auto;
+            background-attachment:fixed;
+          display: block;
+    
+        }
+                #inp{
+                    width: 200px;
+                    
+        
+        }
+                #elements{
+                    width: 100%;
+                }
+                result1{
+                    font-size: 14px;
+                }
+               
+            </style> <footer id="softkeys">
+            <div id="softkey-left">Forward</div>
+            <div id="softkey-center">Go</div>
+            <div id="softkey-right">Back</div>
+        </footer>
+</html>

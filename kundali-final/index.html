@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Kundali</title>
+
+
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<style type="text/css">
+
+</style>
+
+<body>
+    <div id="list">
+        <!-- Tab links -->
+
+        <form id="jdata" name=jdata>
+
+
+
+
+            <input class="items" tabindex="0" type="text" id="name" name="name" placeholder="Name" value="" min="1"
+                autofocus>
+            <input class="items" tabindex="1"  id="date" name="date" placeholder="1900/01/31"
+                min="0000-01-01" max="6000-01-31" value="" required>
+            <input class="items" tabindex="2"  id="time" name="time" placeholder="23:59" value="" step="10"
+                required>
+            <input class="items" tabindex="3" type="text" id="tz" name="tz" min="-12" max="14" placeholder="+1" value=""
+                step="1" required>
+            <input class="items" tabindex="4" type="text" id="lat" name="lat" placeholder="45N48" value="" required>
+            <input class="items" tabindex="5" type="text" id="lon" name="lon" placeholder="15E58" value="" required>
+            <input class="items" tabindex="6" id="create" type="button" value="Create Kundali">
+
+
+
+        </form>
+
+    </div>
+  
+    <article class="disable_select">
+<div id="info">
+        
+    <canvas id="canvas_info" width="625" height="190">[ Information ]</canvas>
+    <canvas id="canvas_chart" width="625" height="210">[ Rasi D1 and Navamsa D9 ]</canvas>
+  </div>
+    </article>
+
+    <section>
+
+
+    </section>
+
+    <article class="disable_select">
+
+        
+
+    </article>
+    <div id="buttons">
+        <button id="a1" onclick="detail()">Deatail</button><button id="a1" onclick="info()">info</button><button id="a1"
+            onclick="chart1()">kundali</button>
+        <buttonid="button" >Generate</button>
+    </div>
+    <div id="key"><span>Back</span></div> 
+
+</body>
+<script>
+    var items = document.querySelectorAll(".items");
+
+    function nav(move) {
+        let currentIndex = document.activeElement.tabIndex;
+        let next = currentIndex + move;
+        var current = items[next];
+        current.focus();
+
+    }
+    function j(){
+                    document.getElementById("info").style.display = "none";
+                    document.getElementById("key").style.display = "none";
+                    items = document.querySelectorAll(".items");
+                    nav(1);
+}
+    document.addEventListener('keydown', function (e) {
+      //  alert(e.key);
+        switch (e.key) {
+            
+            case 'ArrowUp':
+                nav(-1);
+                break;
+            case 'ArrowDown':
+                nav(1);
+                break;
+            case 'Shift':
+            case 'SoftLeft':
+                j();
+                break;
+            
+              
+        }
+    })
+ document.getElementById('create').addEventListener("click",function(){
+var active= document.activeElement;
+active.blur();
+items = 0;
+document.getElementById("info").style.display = "block";
+document.getElementById("key").style.display = "block";
+generate();
+ })
+ nav(0);
+</script>
+<script type="text/javascript" src="cal.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+</html>
+<!-- The End -->

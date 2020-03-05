@@ -1,0 +1,65 @@
+<html>
+<head></head>
+    <meta name="viewport" content="width=device-width,user-scalable=no">
+     <link rel="stylesheet" href="../css.css">
+    <body id='main'>
+        <script src="../JS/naviboard.min.js"></script>
+       
+        <div id="container">
+             
+            
+            <a href="3D.html" class="navigable" id="elements">Sphere</a>
+            <input class="navigable" id="a" placeholder="Value of Radius" type="number" value="">
+           
+            
+            <button class="navigable" id="elements" onclick="fun()">Result</button>
+            <p id="result1" class="navigable">long press on backspace for delete values</p>
+              <p id="result2" class="navigable"></p>
+            <a href="#"  class="navigable" id="elements"><div></div></a>
+            <a href="#"  class="navigable" id="elements"><div></div></a>
+           
+            
+            
+          
+          <script>
+              function fun(){
+                  var pi = Math.PI;
+                  var r = document.getElementById("a").value;
+                  var res1 = document.getElementById("result1");
+                   var res2 = document.getElementById("result2");
+                  var area = 4*pi*r*r;
+                  var vol = 4/3*pi*r*r*r;
+                  res1.innerHTML = "<p>Area: "+area+" m<sup>2</sup></p>";
+                  res2.innerHTML = "<p>Volume: "+vol+" m<sup>3</sup></p>";
+                  
+                  
+              }
+           </script>
+            <script>
+         naviBoard.setNavigation('container');
+      </script>
+            <style>
+             #main{
+          
+            background-image: url(../IMG/img_wallpaper_08.jpg);
+            background-repeat: no-repeat;
+            background-size: auto;
+            background-attachment:fixed;
+          display: block;
+    
+        }
+                #a,#b,#c{
+                    width: 200px;
+        
+        }
+                #elements{
+                    width: 100%;
+                }
+
+               
+            </style> <footer id="softkeys">
+            <div id="softkey-left">Forward</div>
+            <div id="softkey-center">Go</div>
+            <div id="softkey-right">Back</div>
+        </footer>
+</html>

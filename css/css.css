@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    padding: 0;
+   background: rgba(240, 240, 240, 0.87);
+}
+
+#container {
+    height: 210px;
+    width: 200px;
+    box-shadow: 0 2px 5px rgba(10, 10, 10, 0.342);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    position: fixed;
+    padding: 5px;
+    border-radius: 15px;
+    background: linear-gradient(45deg, rgb(250, 104, 182), rgb(103, 232, 255));
+
+
+}
+
+
+
+.items {
+
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.466);
+    outline: 0;
+    transition-duration: 0.7s;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(10, 10, 10, 0.342);
+    margin: 5px;
+    border: none;
+}
+#detDEL{
+    background-image: url("../detDEL/DetDEL.ico");
+    background-position: 50% 50%;
+} 
+#detDEL:focus{
+    filter: saturate(2) hue-rotate(90deg);
+}
+
+#kundali{
+    background-image: url("../kundali-final/icons/ico.ico");
+    background-position: 50% 50%;
+}
+#kundali:focus{
+    filter: saturate(2) hue-rotate(90deg);
+}
+#QuardicEQ{
+    background-image: url("../QuardicEQv3.3/IMG/ico.ico");
+    background-position: 50% 50%;
+}
+#QuardicEQ:focus{
+    filter: saturate(2) hue-rotate(90deg);
+}
+#Trignometry_container{
+    display: none;
+}
+.items:focus {
+
+    transform: scale(1.0) rotate(359deg) rotateX(0deg);
+    border-radius: 50%;
+    box-shadow: 0 0px 0px rgba(10, 10, 10, 0);
+    background: linear-gradient(45deg, rgb(80, 28, 253), rgb(6, 208, 243));
+}
+
+#rows {
+    display: flex;
+}
+
+#heading {
+    top: 15px;
+    border-radius: 7px;
+    height: 40px;
+    left: 50%;
+    
+    width: 210px;
+    box-shadow: 0 2px 5px rgba(10, 10, 10, 0.342);
+    transform: translate(-50%, 0);
+    position: fixed;
+    line-height: 35px;
+    display: table-cell;
+    font-size: 1.3rem;
+    text-align: center;
+    font-weight:bold;
+    color: white;
+    text-shadow: 0 2px 2px rgba(10, 10, 10, 0.342);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: linear-gradient(45deg, rgb(90, 189, 255), rgb(42, 152, 255));
+}

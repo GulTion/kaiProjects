@@ -1,0 +1,73 @@
+<html>
+<head></head>
+    <meta name="viewport" content="width=device-width,user-scalable=no">
+     <link rel="stylesheet" href="../css.css">
+    <body id='main'>
+        <script src="../JS/naviboard.min.js"></script>
+        <script src="../JS/math.min.js"></script>
+       
+        <div id="container">
+             
+            
+            <a href="basic.html" class="navigable" id="elements">Derivative</a>
+            <input class="navigable" id="a" placeholder="Put Function" type="text" value="3sin(x)^3+2x^3x">
+             <input class="navigable" id="b" placeholder="With respect to" type="text" value="x">
+            <button class="navigable" id="elements" onclick="fun()">Result</button>
+            <p id="result1" class="navigable">long press on backspace for delete values</p>
+<p id="result2" class="navigable"></p>
+            
+             <a href="#"  class="navigable" id="elements"><div></div></a>
+            <a href="#"  class="navigable" id="elements"><div></div></a>
+            
+            
+          
+           <script>
+           function fun(){
+               var x = document.getElementById("a").value;
+              
+               var y = document.getElementById("b").value;
+               var res1 = document.getElementById("result1");
+             var d = math.derivative(x,y);
+            
+             
+               res1.innerHTML = "<p>"+d+"</p>";
+             
+                   
+                 
+               }
+            </script>
+            
+                
+     
+        <script>
+            
+        naviBoard.setNavigation('container');
+           
+          
+            
+        </script>
+            <style>
+             #main{
+          
+            background-image: url(../IMG/img_wallpaper_07.jpg);
+            background-repeat: no-repeat;
+            background-size: auto;
+            background-attachment:fixed;
+          display: block;
+    
+        }
+                #inp{
+                    width: 200px;
+                    
+        
+        }
+                #elements{
+                    width: 100%;
+                }
+              
+            </style> <footer id="softkeys">
+            <div id="softkey-left">Forward</div>
+            <div id="softkey-center">Go</div>
+            <div id="softkey-right">Back</div>
+        </footer>
+</html>

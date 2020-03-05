@@ -1,0 +1,24 @@
+{
+  "version": "3.3",
+  "name": "QuardicEQ",
+  "description": "What you want in maths ?",
+  "launch_path": "/index.html",
+  "icons": {
+    "112": "/IMG/ico.ico",
+    "56": "/IMG/ico.ico"
+  },
+  "fullscreen" : false,
+  "developer": {
+    "name": "GulTion",
+    "url": "gultion.epizy.com"
+  },
+ 
+  "locales": {
+    "en-US": {
+      "name": "QuardicEQ",
+      "subtitle": "ha ha ha!",
+      "description": "What you want in maths ?"
+    }
+  },
+  "default_locale": "en-US"
+}

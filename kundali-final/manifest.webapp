@@ -1,0 +1,15 @@
+{
+  "version": "1.0.0",
+ "type": "certified",  "name": "Kundali",
+"fullscreen":"true",
+  "description": "Kundali: this is astrology app use to make kundali chart of user",
+  "launch_path": "/index.html",
+  "icons": {
+    "128": "/ico/ico.ico"
+  }, 
+
+  "developer": {
+    "name": "GulTion",
+    "url": "#"
+  }
+}
